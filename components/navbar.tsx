@@ -25,9 +25,9 @@ export default function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="relative h-8 w-8 overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
-            <div className="absolute inset-0 flex items-center justify-center text-white">F</div>
+            <div className="absolute inset-0 flex items-center justify-center text-white">B</div>
           </div>
-          <span className="text-xl font-bold text-white">FuturLearn</span>
+          <span className="text-xl font-bold text-white">Bvoc HUB</span>
         </Link>
 
         {/* Desktop Navigation */}

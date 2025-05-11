@@ -10,7 +10,7 @@ import { ArrowRight, Mail, Lock } from "lucide-react"
 import { signIn } from "next-auth/react"
 import { error } from "console"
 import { toast } from "sonner"
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/router"
 
 export default function Login() {
   const [formState, setFormState] = useState({

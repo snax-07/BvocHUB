@@ -139,18 +139,14 @@ export default function Documents() {
                             size="sm"
                             variant="outline"
                             className="h-8 border-zinc-700 hover:border-purple-500 hover:bg-purple-500/10 hover:text-purple-400"
-                            onClick={async () => {
-                              const url = `${doc.url}`
-                              const response = await fetch(url)
-                              const blob = await response.blob()
+                            onClick={() => {
+                              const link = document.createElement("a");
+link.href = doc.url;
+link.download = `${doc.title}.pdf`;
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
 
-                              // Create a link to trigger the download
-                              const link = document.createElement("a")
-                              link.href = URL.createObjectURL(blob)
-                              link.download = `${doc.title}.pdf` // Suggested file name
-                              document.body.appendChild(link)
-                              link.click()
-                              document.body.removeChild(link)
                             }}
                           >
                             <Download className="mr-1 h-4 w-4" />

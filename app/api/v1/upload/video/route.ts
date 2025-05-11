@@ -18,8 +18,8 @@ type cloudinaryUploadResult = {
 }
 export async function POST(req : NextRequest) {
     try {
-        const session = await auth();
-        if(!session?.user) return NextResponse.json({ message : "Unauthenticated " , status : false} , {status : 403});
+        // const session = await auth();
+        // if(!session?.user) return NextResponse.json({ message : "Unauthenticated " , status : false} , {status : 403});
         
         await dbConnect();
 
@@ -48,7 +48,7 @@ export async function POST(req : NextRequest) {
             description : des,
             url : response.url,
             duration : response.duration,
-            uploader : session?.user.name
+            uploader : "admin"
         });
 
         await newDoc.save();

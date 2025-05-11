@@ -34,10 +34,14 @@ export default function Login() {
     const response = await signIn("credentials", {
       email : formState.email,
       password : formState.password,
-      redirect : false
+      redirect : false,
+      callbackUrl : '/documents'
     })
     if(response?.error) toast.error("Invalid Credentails !")
-    else {toast.success("User logged in Successfully !") ; router.push('/documents') } 
+    else {
+  toast.success("User logged in Successfully !") 
+   router.push('/documents') 
+  } 
   }
 
   // UseEffect to ensure component only renders on the client side to avoid hydration errors

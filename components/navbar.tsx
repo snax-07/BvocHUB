@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const logout = async () => {
     await signOut();
-    router.push('bov-hub.vercel.app')
+    router.push('/')
   };
 
   // Prevent hydration mismatch by not rendering until session is loaded

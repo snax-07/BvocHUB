@@ -79,7 +79,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
      
       return session;
     },
-  }
+},session: {
+  strategy: "jwt",
+  maxAge: 30 * 24 * 60 * 60, // 30 days
+}
 });
 
 export const { GET, POST } = handlers;

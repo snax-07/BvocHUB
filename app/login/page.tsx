@@ -35,7 +35,6 @@ export default function Login() {
       email : formState.email,
       password : formState.password,
       redirect : false,
-      callbackUrl : '/documents'
     })
     if(response?.error) toast.error("Invalid Credentails !")
     else {

@@ -39,7 +39,6 @@ export default function Login() {
     if(response?.error) toast.error("Invalid Credentails !")
     else {
   toast.success("User logged in Successfully !") 
-   router.push('/documents') 
   } 
   }
 
